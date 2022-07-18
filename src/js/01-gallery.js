@@ -22,14 +22,9 @@ function createGallery(images) {
   }
 
   const lightbox = new SimpleLightbox(".gallery a", {
-    //captionType : "alt",
     captionsData: "alt",
-   // docClose: false,
-   // close : false,
     captionDelay: 250,
     animationSpeed : 200,
-    maxZoom: 5,
-   // disableScroll : false,
-    
+    maxZoom: 5, 
   });
 
