@@ -3,9 +3,9 @@ import throttle from "lodash.throttle";
 //const throttle = require("lodash.throttle")
 //const Vimeo = require("@vimeo/player")
 
-const saveTime = "videoplayer-current-time";
-//console.log(saveTime)
-const videoPlayer = localStorage.getItem(saveTime);    
+const SAVE_TIME_VIDEO = "videoplayer-current-time";
+//console.log(SAVE_TIME_VIDEO)
+const videoPlayer = localStorage.getItem(SAVE_TIME_VIDEO);    
 //console.log(videoPlayerCurrentTime)
 const iframe = document.querySelector("iframe");
 //console.log(iframe)
@@ -20,7 +20,7 @@ player.on("timeupdate", throttle(onTime, 1000))
 
 function onTime(event) { 
     const time = event.seconds;
-    localStorage.setItem(saveTime, time);
+    localStorage.setItem(SAVE_TIME_VIDEO, time);
 };
 
 
