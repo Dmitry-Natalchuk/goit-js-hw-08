@@ -6,7 +6,7 @@ import throttle from "lodash.throttle";
 const SAVE_TIME_VIDEO = "videoplayer-current-time";
 //console.log(SAVE_TIME_VIDEO)
 const videoPlayer = localStorage.getItem(SAVE_TIME_VIDEO);    
-//console.log(videoPlayerCurrentTime)
+//console.log(videoPlayer)
 const iframe = document.querySelector("iframe");
 //console.log(iframe)
 
