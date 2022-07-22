@@ -16,7 +16,8 @@ const form = document.querySelector(".feedback-form")
 
 const FORM_SAVE_KEY = "feedback-form-state";
 
-localForm();
+//localForm();
+window.addEventListener("DOMContentLoaded", localForm)
 
 const formData = {
     email: form.email.value,
@@ -43,14 +44,12 @@ function onFormSubmit(evt) {
     localStorage.removeItem(FORM_SAVE_KEY);
     form.reset();
 }
+
 function localForm() {
     const localData = JSON.parse(localStorage.getItem(FORM_SAVE_KEY));
 
     if (!localData) return;
-
-    if (localData.email)
         form.email.value = localData.email;
-    if (localData.message)
         form.message.value = localData.message;
 
     /* if(localData.email && localData.message) {
