@@ -20,8 +20,8 @@ const FORM_SAVE_KEY = "feedback-form-state";
 window.addEventListener("DOMContentLoaded", localForm)
 
 const formData = {
-    email: form.email.value,
-    message: form.message.value,
+    email: form.elements.email.value,
+    message: form.elements.message.value,
 };
 
 form.addEventListener("input", throttle(onFormInput, 500));
